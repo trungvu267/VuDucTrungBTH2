@@ -1,0 +1,20 @@
+@model IEnumerable<MvcDotNet_BTH.Models.Student>
+<h2>Danh sách sinh vien</h2>
+<hr>
+<table class="table border">
+    <tr>
+        <th>
+            <label>Ma Sinh vien</label>
+        </th>
+        <th>
+            <label>Ten Sinh vien</label>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StudentId</td>
+            <td>@item.StudentName</td>
+        </tr>
+    }
+</table>
