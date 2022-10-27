@@ -9,12 +9,17 @@
         <th>
             <label>Ten Sinh vien</label>
         </th>
+        <th></th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.StudentId</td>
             <td>@item.StudentName</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StudentId">Sửa</a>
+                <a asp-action="Delete" asp-route-id="@item.StudentId">Xóa</a>
+            </td>
         </tr>
     }
 </table>

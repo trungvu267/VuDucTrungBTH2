@@ -1,4 +1,8 @@
-<form asp-action="Create">
+@model MvcDotNet_BTH.Models.Student
+
+<h1>Tạo một sinh viên mới</h1>
+<hr/>
+@* <form asp-action="Create">
     <label>Ma sinh vien:</label>
     <input type="number" name="StudentID" value="1">
     <br>
@@ -7,4 +11,26 @@
     <br>
     <input type="submit" value="Send">
 </form>
-<h2>@ViewBag.TT</h2>
+<h2>@ViewBag.TT</h2> *@
+<div class="row">
+    <div class="col-md-4">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="StudentId" class="control-label"></label>
+            <input asp-for="StudentId" class="form-control">
+            <span asp-validation-for="StudentId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="StudentName" class="control-label"></label>
+            <input asp-for="StudentName" class="form-control">
+            <span asp-validation-for="StudentName" class="text-danger"></span>
+        </div>
+        <br/>
+        <div class="form-group">
+            <input class="btn btn-primary" type="text" value="Save">
+            <a class="btn btn-success" asp-action="Index">Danh sách sinh viên</a>
+        </div>
+    </form>
+    </div>
+</div>
